@@ -30,7 +30,7 @@ This project is a simple web-based calculator built using HTML, CSS, JavaScript,
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/calculator-project.git
+   git clone https://github.com/Sreenathkk00/calculator-project.git
 2. **Navigate to the project directory**:
    ```bash
    cd calculator-project
