@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container-fluid{
+    background-image: url("https://img.freepik.com/premium-photo/dark-wall-empty-room-with-plants-floor-3d-rendering_41470-3847.jpg?w=900");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.col-4{
+    width: 400px!important;
+    height: 510px;
+    border: solid  orange;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, .5);
+}
+.h2{
+    font-family: "Arial", sans-serif;
+    
+    font-size: 24px;
+}
+input{
+    width: 300px;
+    height: 60px;
+    border-radius: 25px;
+    border: solid 1px orange;
+    padding: 20px;
+    color: white;
+    font-weight: 600!important;
+    font-size: 20px!important;
+}
+.btn{
+    width: 60px!important;
+    height: 60px!important;
+    border-radius:50%!important;
+    border: solid 1px orange !important;
+    color : white!important;
+    font-weight: 600!important;
+    font-size: 20px!important;
+    
+}
+.btn:hover{
+    background-color: orange!important;
+    color: white!important;
+    
+}
+.equal{
+    background-color: orange!important;
+}
+@media screen and (max-width: 600px) {
+    .col-4{
+        
+        width: 300px!important;
+    }
+    input{
+        width: 200px;
+    }
+}
