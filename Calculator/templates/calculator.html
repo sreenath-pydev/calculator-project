@@ -8,108 +8,112 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Link to external CSS file using Django's static template tag -->
-        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <!-- Link to Bootstrap CSS from CDN -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Link to Font Awesome from CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
-       <div class='row container-fluid'>
-           <div class='col-4 col-sm-6 mx-auto my-3 text-center'>
-               <!-- Calculator Title -->
-               <h2 class='text-white'>CALCULATOR</h2>
-               <div class='Input'>
-                   <!-- Input field to display the calculator's screen -->
-                   <input type='text' id="screen" disabled>
+       <div class="row container-fluid" id="background-container">
+           <div class="col-4 col-sm-6 mx-auto my-3 text-center">
+               <!-- Thme change icons -->
+                <div class="col-sm-12 pt-5 d-flex justify-content-end" onclick=Changetheme() id="icon">
+                    <i class="fa-solid fa-sun fa-2xl" style="color: #ffffff" ></i>
+                </div>
+                <!-- Input field to display the calculator's screen -->
+               <div class="Input mt-2">
+                   <input type="text" id="screen" disabled>
                </div>
                <!-- First row of buttons -->
-               <div class='row pt-3'>
+               <div class="row pt-3">
                    <div class="col-3 col-sm-3">
                        <!-- Clear screen button -->
-                       <button type="button" onclick=ClearScreen() class="btn">AC</button>
+                       <button type="button" onclick=ClearScreen() class="btn " >AC</button>
                    </div>
                    <div class="col-3">
                        <!-- Percentage button -->
-                       <button type="button" onclick=btnClick("%") class="btn">%</button>
+                       <button type="button" onclick=btnClick("%") class="btn" >%</button>
                    </div>
                    <div class="col-3">
                        <!-- Delete button -->
-                       <button type="button" onclick=Delete() class="btn">CE</button>
+                       <button type="button" onclick=Delete() class="btn" >CE</button>
                    </div>
                    <div class="col-3">
                        <!-- Division button -->
-                       <button type="button" onclick=btnClick("/") class="btn">/</button>
+                       <button type="button" onclick=btnClick("/") class="btn" >/</button>
                    </div>
                </div>
                <!-- Second row of buttons -->
                <div class='row pt-3'>
                    <div class="col-3">
                        <!-- Number 7 button -->
-                       <button type="button" onclick=btnClick(7) class="btn">7</button>
+                       <button type="button" onclick=btnClick(7) class="btn" >7</button>
                    </div>
                    <div class="col-3">
                        <!-- Number 8 button -->
-                       <button type="button" onclick=btnClick(8) class="btn">8</button>
+                       <button type="button" onclick=btnClick(8) class="btn" >8</button>
                    </div>
                    <div class="col-3">
                        <!-- Number 9 button -->
-                       <button type="button" onclick=btnClick(9) class="btn">9</button>
+                       <button type="button" onclick=btnClick(9) class="btn" >9</button>
                    </div>
                    <div class="col-3">
                        <!-- Multiplication button -->
-                       <button type="button" onclick=btnClick("*") class="btn">*</button>
+                       <button type="button" onclick=btnClick("*") class="btn" >*</button>
                    </div>
                </div>
                <!-- Third row of buttons -->
                <div class='row pt-3'>
                    <div class="col-3">
                        <!-- Number 4 button -->
-                       <button type="button" onclick=btnClick(4) class="btn">4</button>
+                       <button type="button" onclick=btnClick(4) class="btn" >4</button>
                    </div>
                    <div class="col-3">
                        <!-- Number 5 button -->
-                       <button type="button" onclick=btnClick(5) class="btn">5</button>
+                       <button type="button" onclick=btnClick(5) class="btn" >5</button>
                    </div>
                    <div class="col-3">
                        <!-- Number 6 button -->
-                       <button type="button" onclick=btnClick(6) class="btn">6</button>
+                       <button type="button" onclick=btnClick(6) class="btn" >6</button>
                    </div>
                    <div class="col-3">
                        <!-- Subtraction button -->
-                       <button type="button" onclick=btnClick("-") class="btn">-</button>
+                       <button type="button" onclick=btnClick("-") class="btn" >-</button>
                    </div>
                </div>
                <!-- Fourth row of buttons -->
                <div class='row pt-3'>
                    <div class="col-3">
                        <!-- Number 1 button -->
-                       <button type="button" onclick=btnClick(1) class="btn">1</button>
+                       <button type="button" onclick=btnClick(1) class="btn" >1</button>
                    </div>
                    <div class="col-3">
                        <!-- Number 2 button -->
-                       <button type="button" onclick=btnClick(2) class="btn">2</button>
+                       <button type="button" onclick=btnClick(2) class="btn" >2</button>
                    </div>
                    <div class="col-3">
                        <!-- Number 3 button -->
-                       <button type="button" onclick=btnClick(3) class="btn">3</button>
+                       <button type="button" onclick=btnClick(3) class="btn" >3</button>
                    </div>
                    <div class="col-3">
                        <!-- Addition button -->
-                       <button type="button" onclick=btnClick("+") class="btn">+</button>
+                       <button type="button" onclick=btnClick("+") class="btn" >+</button>
                    </div>
                </div>
                <!-- Fifth row of buttons -->
                <div class='row pt-3'>
                    <div class="col-3">
                        <!-- Double zero button -->
-                       <button type="button" onclick=TwoDigit(0,0) class="btn">00</button>
+                       <button type="button" onclick=TwoDigit(0,0) class="btn" >00</button>
                    </div>
                    <div class="col-3">
                        <!-- Number 0 button -->
-                       <button type="button" onclick=btnClick(0) class="btn">0</button>
+                       <button type="button" onclick=btnClick(0) class="btn" >0</button>
                    </div>
                    <div class="col-3">
                        <!-- Decimal point button -->
-                       <button type="button" onclick=btnClick(".") class="btn">.</button>
+                       <button type="button" onclick=btnClick(".") class="btn" >.</button>
                    </div>
                    <div class="col-3">
                        <!-- Equals button -->
@@ -118,9 +122,9 @@
                </div>
            </div>
        </div>
-        
+
         <!-- Link to external JavaScript file using Django's static template tag -->
-        <script src="{% static 'scripts.js' %}"></script>
+        <script src="{% static 'js/scripts.js' %}"></script>
         <!-- Bootstrap script from CDN -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

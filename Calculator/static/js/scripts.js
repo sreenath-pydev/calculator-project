@@ -27,3 +27,14 @@ function Calculate(){
         document.getElementById("screen").value = "";
     }
 }
+// Change theme
+function Changetheme() {
+    var icon = document.getElementById("icon");
+    document.body.classList.toggle("dark-theme");
+
+    if (document.body.classList.contains("dark-theme")) {
+        icon.innerHTML = '<i class="fa-solid fa-moon fa-2xl"></i>';
+    }else{
+        icon.innerHTML = '<i class="fa-regular fa-sun fa-2xl" style="color: #ffffff"></i>';
+    }
+}
