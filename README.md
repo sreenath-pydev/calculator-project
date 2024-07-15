@@ -1,5 +1,7 @@
 # Calculator Project
-<img src="https://github.com/user-attachments/assets/d362d7b5-acb2-438e-b351-4720898dc28c" alt="Blue Gradient Modern Youtube Intro" width="600px" height="300px">
+
+<img src="https://github.com/user-attachments/assets/075cfd91-64ef-475e-b2ed-271eb9ac00e2" alt="Blue Gradient Modern Youtube Intro" width="600px" height="300px">
+
 
 
 
