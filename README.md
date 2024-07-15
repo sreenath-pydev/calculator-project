@@ -13,13 +13,14 @@ This project is a simple web-based calculator built using HTML, CSS, JavaScript,
 - **Basic Operations**: Supports basic arithmetic operations like addition, subtraction, multiplication, and division.
 - **Special Functions**: Includes functionalities for clearing the screen (AC), deleting the last entry (CE), and calculating percentages (%).
 - **Real-Time Calculations**: Provides immediate feedback and results as users input numbers and operations.
+- **Theme Options**: Implements dark theme and light theme options for customized user interface preferences.
 
 ## Technologies Used
 
 - **HTML**: For the structure of the calculator.
 - **CSS**: For custom styling.
 - **Bootstrap**: For responsive design and additional styling.
-- **JavaScript**: For the calculator's functionality and user interaction.
+- **JavaScript**: Client-side scripting for interactive functionalities like theme switching and calculator operations..
 - **Django**: For template rendering and static file management.
 
 ## File Structure
@@ -54,6 +55,7 @@ This project is a simple web-based calculator built using HTML, CSS, JavaScript,
 - **Clear screen (AC)**: Clears all input.
 - **Delete last entry (CE)**: Deletes the last entered character.
 - **Calculate result (=)**: Displays the result of the entered arithmetic expression.
+- **Toggle Dark/Light Theme**: Click on the theme icons (e.g., moon for dark theme, sun for light theme) to switch between themes.
 
 ## Contributing
 
